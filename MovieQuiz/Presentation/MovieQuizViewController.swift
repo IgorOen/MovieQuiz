@@ -2,20 +2,11 @@ import UIKit
 
 final class MovieQuizViewController: UIViewController {
     
-    @IBOutlet private weak var previewImageView: UIImageView!
-    @IBOutlet private weak var questionTitleLabel: UILabel!
-    @IBOutlet private weak var indexLabel: UILabel!
-    @IBOutlet weak var noButton: UIButton!
-    @IBOutlet weak var yesButton: UIButton!
-    
-    @IBAction private func noButtonClicked(_ sender: UIButton) {
-        let currentQuestion = questions[currentQuestionIndex]
-        showAnswerResult(isCorrect: currentQuestion.correctAnswer == false)
-    }
-    @IBAction private func yesButtonClicked(_ sender: UIButton) {
-        let currentQuestion = questions[currentQuestionIndex]
-        showAnswerResult(isCorrect: currentQuestion.correctAnswer == true)
-    }
+    @IBOutlet private weak var previewImageView: UIImageView?
+    @IBOutlet private weak var questionTitleLabel: UILabel?
+    @IBOutlet private weak var indexLabel: UILabel?
+    @IBOutlet private weak var noButton: UIButton?
+    @IBOutlet private weak var yesButton: UIButton?
     
     private let questions: [QuizQuestion] = [
         QuizQuestion(
@@ -73,6 +64,17 @@ final class MovieQuizViewController: UIViewController {
     
     private var correctAnswers = 0
     
+    
+    @IBAction private func noButtonClicked(_ sender: UIButton) {
+        let currentQuestion = questions[currentQuestionIndex]
+        showAnswerResult(isCorrect: currentQuestion.correctAnswer == false)
+        
+    }
+    @IBAction private func yesButtonClicked(_ sender: UIButton) {
+        let currentQuestion = questions[currentQuestionIndex]
+        showAnswerResult(isCorrect: currentQuestion.correctAnswer == true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let currentQuestion = questions[currentQuestionIndex]
@@ -87,13 +89,13 @@ final class MovieQuizViewController: UIViewController {
     }
     
     private func show(quiz step: QuizStepViewModel) {
-        noButton.isEnabled = true
-        yesButton.isEnabled = true
-        previewImageView.image = step.image
-        questionTitleLabel.text = step.question
-        indexLabel.text = step.questionNumber
+        noButton?.isEnabled = true
+        yesButton?.isEnabled = true
+        previewImageView?.image = step.image
+        questionTitleLabel?.text = step.question
+        indexLabel?.text = step.questionNumber
         
-        previewImageView.layer.borderWidth = 0
+        previewImageView?.layer.borderWidth = 0
     }
     
     private func show(quiz result: QuizResultsViewModel) {
@@ -117,15 +119,15 @@ final class MovieQuizViewController: UIViewController {
     }
     
     private func showAnswerResult(isCorrect: Bool) {
-        noButton.isEnabled = false
-        yesButton.isEnabled = false
+        noButton?.isEnabled = false
+        yesButton?.isEnabled = false
         if isCorrect {
             correctAnswers += 1
         }
-        previewImageView.layer.masksToBounds = true
-        previewImageView.layer.borderWidth = 8
-        previewImageView.layer.cornerRadius = 20
-        previewImageView.layer.borderColor = isCorrect ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
+        previewImageView?.layer.masksToBounds = true
+        previewImageView?.layer.borderWidth = 8
+        previewImageView?.layer.cornerRadius = 20
+        previewImageView?.layer.borderColor = isCorrect ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.showNextQuestionOrResults()
