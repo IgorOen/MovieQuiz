@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 100;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		AD5EE5DE284D7887003966EF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5EE5DD284D7887003966EF /* UIColor+Extensions.swift */; };
 		AD77F5742857F8810062FB14 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77F5732857F8810062FB14 /* Date+Extensions.swift */; };
 		AD7AFA552836189F00399704 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7AFA542836189F00399704 /* Array+Extensions.swift */; };
+		D3AD21D82FF68588006B4352 /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3AD21D72FF68588006B4352 /* YS Display-Medium.ttf */; };
+		D3AD21D92FF68588006B4352 /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3AD21D62FF68588006B4352 /* YS Display-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,15 +32,15 @@
 		AD5EE5DD284D7887003966EF /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		AD77F5732857F8810062FB14 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AD7AFA542836189F00399704 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		D3AD21D62FF68588006B4352 /* YS Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold.ttf"; sourceTree = "<group>"; };
+		D3AD21D72FF68588006B4352 /* YS Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AD1ABAAB2831907B00B3E448 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -72,6 +74,8 @@
 				AD1ABABC2831907F00B3E448 /* LaunchScreen.storyboard */,
 				AD1ABABA2831907F00B3E448 /* Assets.xcassets */,
 				AD1ABABF2831907F00B3E448 /* Info.plist */,
+				D3AD21D62FF68588006B4352 /* YS Display-Bold.ttf */,
+				D3AD21D72FF68588006B4352 /* YS Display-Medium.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -129,8 +133,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = MovieQuiz;
 			productName = MovieQuiz;
 			productReference = AD1ABAAE2831907B00B3E448 /* MovieQuiz.app */;
@@ -153,7 +155,6 @@
 				};
 			};
 			buildConfigurationList = AD1ABAA92831907B00B3E448 /* Build configuration list for PBXProject "MovieQuiz" */;
-			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -161,6 +162,7 @@
 				Base,
 			);
 			mainGroup = AD1ABAA52831907B00B3E448;
+			preferredProjectObjectVersion = 100;
 			productRefGroup = AD1ABAAF2831907B00B3E448 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,20 +175,19 @@
 /* Begin PBXResourcesBuildPhase section */
 		AD1ABAAC2831907B00B3E448 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
+				D3AD21D82FF68588006B4352 /* YS Display-Medium.ttf in Resources */,
+				D3AD21D92FF68588006B4352 /* YS Display-Bold.ttf in Resources */,
 				AD1ABABE2831907F00B3E448 /* LaunchScreen.storyboard in Resources */,
 				AD1ABABB2831907F00B3E448 /* Assets.xcassets in Resources */,
 				AD1ABAB92831907B00B3E448 /* Main.storyboard in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD1ABAAA2831907B00B3E448 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				AD5EE5DE284D7887003966EF /* UIColor+Extensions.swift in Sources */,
 				AD7AFA552836189F00399704 /* Array+Extensions.swift in Sources */,
@@ -195,7 +196,6 @@
 				AD1ABAB22831907B00B3E448 /* AppDelegate.swift in Sources */,
 				AD1ABAB42831907B00B3E448 /* SceneDelegate.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -219,7 +219,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AD1ABAC02831907F00B3E448 /* Debug */ = {
+		AD1ABAC02831907F00B3E448 /* Debug configuration for PBXProject "MovieQuiz" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,7 +281,7 @@
 			};
 			name = Debug;
 		};
-		AD1ABAC12831907F00B3E448 /* Release */ = {
+		AD1ABAC12831907F00B3E448 /* Release configuration for PBXProject "MovieQuiz" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -337,7 +337,7 @@
 			};
 			name = Release;
 		};
-		AD1ABAC32831907F00B3E448 /* Debug */ = {
+		AD1ABAC32831907F00B3E448 /* Debug configuration for PBXNativeTarget "MovieQuiz" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -349,10 +349,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,7 +367,7 @@
 			};
 			name = Debug;
 		};
-		AD1ABAC42831907F00B3E448 /* Release */ = {
+		AD1ABAC42831907F00B3E448 /* Release configuration for PBXNativeTarget "MovieQuiz" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -379,10 +379,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -403,19 +403,17 @@
 		AD1ABAA92831907B00B3E448 /* Build configuration list for PBXProject "MovieQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD1ABAC02831907F00B3E448 /* Debug */,
-				AD1ABAC12831907F00B3E448 /* Release */,
+				AD1ABAC02831907F00B3E448 /* Debug configuration for PBXProject "MovieQuiz" */,
+				AD1ABAC12831907F00B3E448 /* Release configuration for PBXProject "MovieQuiz" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		AD1ABAC22831907F00B3E448 /* Build configuration list for PBXNativeTarget "MovieQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD1ABAC32831907F00B3E448 /* Debug */,
-				AD1ABAC42831907F00B3E448 /* Release */,
+				AD1ABAC32831907F00B3E448 /* Debug configuration for PBXNativeTarget "MovieQuiz" */,
+				AD1ABAC42831907F00B3E448 /* Release configuration for PBXNativeTarget "MovieQuiz" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
