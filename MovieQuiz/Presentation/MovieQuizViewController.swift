@@ -24,30 +24,28 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        statisticService = StatisticService()
-        
-        let questionFactory = QuestionFactory()
-        questionFactory.setup(delegate: self)
-        self.questionFactory = questionFactory
 
-        questionFactory.requestNextQuestion()
+        configureDependencies()
+    }
+
+    private func configureDependencies() {
+        statisticService = StatisticService()
+
+        let factory = QuestionFactory()
+        factory.setup(delegate: self)
+
+        questionFactory = factory
+        factory.requestNextQuestion()
     }
     
     // MARK: - Actions
     
     @IBAction private func noButtonClicked(_ sender: UIButton) {
-        guard let currentQuestion = currentQuestion else {
-            return
-        }
-        showAnswerResult(isCorrect: currentQuestion.correctAnswer == false)
+        showAnswerResult(answer: false)
         
     }
     @IBAction private func yesButtonClicked(_ sender: UIButton) {
-        guard let currentQuestion = currentQuestion else {
-            return
-        }
-        showAnswerResult(isCorrect: currentQuestion.correctAnswer == true)
+        showAnswerResult(answer: true)
     }
     
     // MARK: - QuestionFactoryDelegate
@@ -107,7 +105,11 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         alertPresenter.show(in: self, model: model)
     }
     
-    private func showAnswerResult(isCorrect: Bool) {
+    private func showAnswerResult(answer: Bool) {
+        guard let currentQuestion else { return }
+
+            let isCorrect = answer == currentQuestion.correctAnswer
+
         noButton?.isEnabled = false
         yesButton?.isEnabled = false
         if isCorrect {
