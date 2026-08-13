@@ -24,7 +24,6 @@
                 <viewController id="BYZ-38-t0r" customClass="MovieQuizViewController" customModule="MovieQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O3v-y6-s7q">
                                 <rect key="frame" x="20" y="106" width="374" height="722"/>
@@ -108,6 +107,9 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-8r-3cD" userLabel="Activity Indicator">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YSc-Jb-b0R"/>
                         <color key="backgroundColor" name="YP Black"/>
@@ -115,12 +117,15 @@
                             <constraint firstItem="YSc-Jb-b0R" firstAttribute="trailing" secondItem="O3v-y6-s7q" secondAttribute="trailing" constant="20" id="48t-EN-yde"/>
                             <constraint firstItem="O3v-y6-s7q" firstAttribute="top" secondItem="YSc-Jb-b0R" secondAttribute="top" constant="10" id="IAZ-z7-kQf"/>
                             <constraint firstItem="YSc-Jb-b0R" firstAttribute="bottom" secondItem="O3v-y6-s7q" secondAttribute="bottom" id="OH3-8p-7CT"/>
+                            <constraint firstItem="xWf-8r-3cD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ROw-3e-mLN"/>
                             <constraint firstItem="O3v-y6-s7q" firstAttribute="leading" secondItem="YSc-Jb-b0R" secondAttribute="leading" constant="20" id="i1C-dg-qFW"/>
+                            <constraint firstItem="xWf-8r-3cD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pMg-1T-AWV"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="xWf-8r-3cD" id="tZ2-wF-Nb0"/>
                         <outlet property="indexLabel" destination="2W3-IK-nMK" id="dMK-1q-rmY"/>
                         <outlet property="noButton" destination="eXs-Zs-Ltu" id="EgU-lW-Iug"/>
                         <outlet property="previewImageView" destination="4XL-K6-hOR" id="t8K-tA-S3B"/>
