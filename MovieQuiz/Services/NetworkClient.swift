@@ -6,6 +6,11 @@ struct NetworkClient {
         case codeError
     }
     
+    private enum Constants {
+        static let successStatusCodeMin = 200
+        static let successStatusCodeMax = 300
+    }
+    
     func fetch(url: URL, handler: @escaping (Result<Data, Error>) -> Void) {
         let request = URLRequest(url: url)
         
@@ -17,7 +22,8 @@ struct NetworkClient {
             }
             
             if let response = response as? HTTPURLResponse,
-                response.statusCode < 200 || response.statusCode >= 300 {
+               response.statusCode < Constants.successStatusCodeMin ||
+               response.statusCode >= Constants.successStatusCodeMax {
                 handler(.failure(NetworkError.codeError))
                 return
             }
